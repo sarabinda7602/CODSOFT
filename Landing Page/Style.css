@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    
+    font-weight: 300;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    max-height: 100%;
+    width: 100vw;
+}
+/*-------------------------------- Hero Section ---------------------------------------------*/
+.Hero{
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/Images/img1.jpg");
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.text h1{
+    color: white;
+    /* font-size: 55px; */
+    font-size: 6vw;
+}
+.hi{
+    font-size: 55px;
+}
+.small{
+    font-size: 20px;
+    color: white;
+}
+
+.text{
+    position: absolute;
+    margin-top: 10vh;
+    height: 60px;
+    padding: 10px 40px;
+}
+.full-stack-developer{
+    overflow: hidden;
+    white-space: nowrap;
+    border-right:5px solid yellow ;
+    animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+.work-content :before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    bottom: -120px;
+    background-color: yellow;
+    border-radius: 10%;
+    transform: scaleX(0);
+    transition: transform 0.4s linear;
+    display: block;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: yellow;
+    }
+}
+
+:hover:before{
+    transform: scaleX(1);
+}
+
+/*-------------------------------- Work Section------------------------------------------- */
+.work
+{
+    height: 150px;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big{
+    font-size: 55px;
+    color: white;
+}
+.work-content{
+    height: 50px;
+    padding: 5px 30px;
+    margin-bottom: 20px;
+}
+.work-content h2:hover{
+    color: yellow;
+    transition: 0.25s ease-in-out;
+}
+.work-content span h2{
+    font-size:40px;
+    letter-spacing: 0.02;
+    padding-bottom: 10px;
+}
+/* -----------------------------------------Card Section -----------------------------------------*/
+.card-section{
+    /* margin: 0px 50px; */
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    
+}
+.card{
+    max-width: 320px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+    margin-left:20px ;
+    margin-right:20px ;
+    transition: 0.3s ease-in;
+}
+.card:hover{
+    border: 3px solid rgb(187, 7, 7);
+    transition: 0.3s ease-in;
+}
+.card-content-container{
+    padding: 5px 20px 0px 20px;
+}
+.card-content-container h3{
+    margin-top: 5px;
+}
+.card-content-container p{
+    font-size: 14px;
+    margin-top: 10px;
+}
+/*-------------------------------- Contact & About Section ------------------------------------*/
+.float{
+    height: 45vh;
+    width: 100vw;
+}
+
+.float-container1{
+    width: 50vw;
+    background-color: rgb(79, 121, 79);
+    color: white;
+}
+
+.float-container2{
+    width: 50vw;
+    background-color: brown;
+    color: white;
+}
+
+.float{
+    display: flex;
+    justify-content: center;
+}
+.text-area h2{
+    font-size: 35px;
+    margin: 5px 5px;
+    padding: 5px 5px;
+}
+.contactme-text ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 10px 0px;
+    padding: 5px 5px;
+}
+.aboutme-text ul{
+    padding: 5px 10px;
+    /* list-style: none; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aboutme-text ul li{
+    font-size: 18px;
+}
+.aboutme-text ul li:hover{
+    color: yellow;
+    transition: 0.25s ease-in-out;
+}
+.contactme-text ul a{
+    background-color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+.contactme-text ul a:hover{
+    color: rgb(244, 6, 6);
+    background-color: yellow;
+}
+/*--------------------------------------- Fotter Section -------------------------------------------------*/
+.bottom{
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 15px;
+}
+.text-area{
+    padding: 20px 50px 20px 20px;
+}
+.bottom p:hover{
+    color: yellow;
+}
+
+@media (max-width:955px) {
+    .card-section{
+        margin-left: 5vw;
+    }
+    .card{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .float{
+        height: 27vh;
+    }
+    .bottom{
+        height: 5vh;
+    }
+}
+@media ( max-width:748px){
+    .card-section{
+        margin-left: 20vw;
+    }
+    .card{
+        margin-top: 30px;
+    }
+    .work-content span h2{
+        font-size:30px;
+        text-align: center;
+    }
+    .big{
+        font-size: 45px;
+        color: white;
+    }
+    .float{
+        height: 25vh;
+    }
+    .text-area h2{
+        font-size: 30px;
+        margin: 5px 5px;
+        padding: 5px 5px;
+    }
+    .aboutme-text ul li{
+        font-size: 16px;
+    }
+    /* .aboutme-text ul li:hover{
+        font-size: 18px;
+    } */
+    .bottom{
+        height: 6vh;
+        text-align: center;
+        padding-top: 28px;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .text h1{
+        font-size: 8vw;
+    }
+    
+}
+@media ( max-width:500px){
+    .work-content span h2{
+        font-size:25px;
+        text-align: center;
+    }
+    .big{
+        font-size: 40px;
+        color: white;
+    }
+    .text-area h2{
+        font-size: 20px;
+        margin: 3px 3px;
+        padding: 3px 3px;
+    }
+    .aboutme-text ul li{
+        font-size: 12px;
+    }
+    .contactme-text ul a{
+        padding: 3px 6px;
+    }
+    .bottom p{
+    font-size: 14px;
+    }
+    .float{
+        height: 20vh;
+        width: 100vw;
+    }
+    .card{
+        margin-left: -20px;
+    }
+}
